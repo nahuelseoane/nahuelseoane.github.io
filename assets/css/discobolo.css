@@ -1,0 +1,52 @@
+/* Only affect this page */
+/* body.page-discobolo {
+} */
+
+/* Images: affect content images only; don't touch sidebar/avatar/icons */
+body.page-discobolo #main img:not(.profile-picture):not(.social-icon) {
+    max-width: 100%;
+    width: 50%;
+    height: auto;
+    border-radius: 10px;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Mobile: full width is nicer on phones */
+@media (max-width: 768px) {
+    body.page-discobolo #main img:not(.profile-picture):not(.social-icon) {
+        width: 100%;
+    }
+}
+
+/* Buttons: reuse your brand color and make it consistent with .button */
+body.page-discobolo .btn,
+body.page-discobolo .button {
+    /* support both class names */
+    display: inline-block;
+    background: #00bcd4;
+    color: #fff;
+    padding: 8px 14px;
+    /* a bit larger than 5/10 */
+    text-decoration: none;
+    border-radius: 6px;
+    transition: background 0.25s ease;
+    line-height: 1.2;
+}
+
+body.page-discobolo .btn:hover,
+body.page-discobolo .button:hover {
+    background: #008ba3;
+}
+
+/* Accessibility: visible keyboard focus */
+body.page-discobolo .btn:focus-visible,
+body.page-discobolo .button:focus-visible {
+    outline: 3px solid #9be7ff;
+    outline-offset: 2px;
+}
+
+/* If you ever use <button class="btn"> add the hand cursor */
+body.page-discobolo button.btn {
+    cursor: pointer;
+}

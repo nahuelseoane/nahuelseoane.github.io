@@ -1,0 +1,142 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>Nahuel Seoane - Programmer</title>
+    <!-- <h1> - Desarrollador web</h1> -->
+    <meta charset="utf-8" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Space+Grotesk:wght@500;700&display=swap"
+        rel="stylesheet">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=JetBrains+Mono:wght@500;700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Syne:wght@600&display=swap"
+        rel="stylesheet">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+</head>
+
+<body>
+    <!-- Sidebar -->
+    <div id="sidebar-placeholder" data-src="partials/sidebar.html"></div>
+
+    <!-- Main Content -->
+    <div id="main">
+        <section id="top">
+            <div class="container">
+                <header>
+                    <h2>Welcome to my portfolio — I’m <strong>Nahuel Seoane</strong></h2>
+                    <p>Web Developer with experience in Backend with Python (Django, Flask, FastAPI)</p>
+                    <p>Frontend in JavaScript (HTML, CSS).</p>
+                    <p>Automation & tester</p>
+                    <a href="assets/pdfs/cv.pdf" target="_blank" class="button">Download CV</a>
+                </header>
+            </div>
+        </section>
+
+        <section id="portfolio">
+            <div class="container">
+                <header>
+                    <h1>Projects</h1>
+                </header>
+
+                <!-- Project 1 -->
+                <div class="project">
+                    <h2>A selection of my web development and Python automation projects.</h2>
+                    <div class="project-list">
+                        <div class="project">
+
+                            <h3>1. 🔧 Automating Payment & Email System for Tennis Club</h3>
+
+                            <a href="pages/discobolo.html">
+                                <img src="assets/images/cobranzas_captura.png" alt="Proyecto 1" />
+                            </a>
+
+                            <p>_Tools: Python, Selenium, Excel (openpyxl), Gmail API, dotenv_</p>
+                            <a href="https://github.com/nahuelscode/automating-discobolo" target="_blank">
+                                👉 [View GitHub Repo]
+                            </a>
+                        </div>
+
+                        <!-- Project 2 -->
+                        <div class="project">
+                            <h3>2. Sending Birthdays greetings to users.</h3>
+                            <a href="https://github.com/nahuelscode/automating-discobolo/tree/main/discobolo/scripts/birthdays"
+                                target="_blank">
+                                <img src="assets/images/birthday_email.jpg" alt="Proyecto 2" />
+                            </a>
+                            <p>_Tools: Python, Gmail API -> People</p>
+                            <a href="https://github.com/nahuelscode/automating-discobolo/tree/main/discobolo/scripts/birthdays"
+                                target="_blank">
+                                👉 [View GitHub Repo]
+                            </a>
+                        </div>
+
+                        <!-- Project 3 -->
+                        <div class="project">
+                            <h3>3. Script to 'PDF Word Substituter' project.</h3>
+                            <a href="https://github.com/nahuelscode/pdf-word-substituter" target="_blank">
+                                <img src="assets/images/modify_pdf_capture.png" alt="Proyecto 3" />
+                            </a>
+                            <p>_Tools: Python, PyMuPDF</p>
+                            <a href="https://github.com/nahuelscode/pdf-word-substituter" target="_blank">
+                                👉 [View GitHub Repo]
+                            </a>
+                        </div>
+                    </div>
+
+
+
+        </section>
+
+        <section id="about">
+            <div class="container">
+                <header>
+                    <h2>About me</h2>
+                </header>
+                <p>
+                    I am a Software Developer with experience in backend development using Python (Django, Flask,
+                    FastAPI), frontend development with JavaScript, and working with both SQL and NoSQL databases. I
+                    also have a strong focus on IT automation, building scripts and tools that streamline processes and
+                    improve efficiency.
+
+                    Currently, I am expanding my knowledge in Software Testing and QA, complementing my development
+                    background with quality assurance practices to deliver reliable and well-tested solutions. My goal
+                    is to contribute to innovative projects where I can combine development, automation, and
+                    problem-solving to create real impact.
+                </p>
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+                <h2>Certificates</h2>
+            </div>
+        </section>
+
+        <section id="contact">
+            <div class="container">
+                <header>
+                    <h2>Contact</h2>
+                </header>
+                <form action="https://formspree.io/f/myzezkog" method="POST">
+                    <input type="text" name="name" placeholder="Your name" required />
+                    <input type="email" name="_replyto" placeholder="Your email" required />
+                    <textarea name="mensaje" placeholder="Message" required></textarea>
+                    <input type="submit" value="Send Message" class="button" />
+                </form>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <div id="footer-placeholder" data-src="partials/footer.html"></div>
+
+    <!-- Scripts -->
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

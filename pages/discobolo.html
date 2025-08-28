@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Space+Grotesk:wght@500;700&display=swap"
+        rel="stylesheet">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=JetBrains+Mono:wght@500;700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Syne:wght@600&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/discobolo.css">
+    <title>Discobolo Automating</title>
+</head>
+
+<body class="page-discobolo">
+    <!-- Sidebar -->
+    <div id="sidebar-placeholder" data-src="../partials/sidebar.html"></div>
+
+    <div id="main">
+        <section id="discobolo-details">
+            <div class="container">
+                <h1>🌀 Automating Discóbolo – Full Walkthrough</h1>
+                <p>Automates downloading bank transactions, updating master Excel files, and loading them into a web
+                    system.
+                </p>
+            </div>
+
+
+            <div class="container">
+                <h3>💻 Step 1: Downloading the Excel File from Banco Provincia</h3>
+                <img id="gif1" src="../assets/gifs/transfers_download.gif" alt="Bank download GIF"
+                    style="max-width: 60%; height: auto;">
+                <br>
+                <button class="btn" onclick="replayGif('gif1')">🔃 Replay</button>
+                <p>The script uses Selenium to log into the bank and download the latest Excel with all transactions.
+                </p>
+            </div>
+
+
+            <div class="container">
+                <h3>📊 Step 2: Updating the Master Excel</h3>
+                <img src="../assets/gifs/transfers_update.gif" alt="Excel update GIF"
+                    style="max-width: 100%; height: auto;">
+                <br>
+                <button class="btn" onclick="replayGif('gif2')">🔃 Replay</button>
+                <p>It compares "<code>N° Secuencia</code>" values to avoid duplicates and inserts new rows with
+                    formatting
+                    preserved.</p>
+            </div>
+
+            <div class="container">
+                <h3>🌐 Step 3: Loading Payments into Sytech</h3>
+                <img id="gif3" src="../assets/gifs/sytech_upload.gif" alt="Sytech automation GIF"
+                    style="max-width: 60%; height: auto;">
+                <br>
+                <button class="btn" onclick="replayGif('gif3')">🔃 Replay</button>
+                <p>The script searches for each client and automatically registers the payment with the right method.
+                </p>
+            </div>
+            <div class="container">
+                <h3>📨 Step 4: Sending emails with receipt</h3>
+                <img id="gif4" src="../assets/gifs/emails.gif" alt="Emails sending GIF"
+                    style="max-width: 60%; height: auto;">
+                <br>
+                <button class="btn" onclick="replayGif('gif4')">🔃 Replay</button>
+                <p>It sends an email to all users with the payment's receipt attached to it</p>
+            </div>
+        </section>
+
+        <div class="container">
+            <a href="https://github.com/Nahuelseoane/AutoDiscoEmails" target="_blank">
+                👉 [View GitHub Repo]
+            </a>
+        </div>
+        <br>
+    </div>
+
+    <div id="footer-placeholder" data-src="../partials/footer.html"></div>
+
+
+    <!-- Scripts -->
+
+    <script src="../assets/js/main.js" defer></script>
+    <script src="../assets/js/discobolo.js" defer></script>
+</body>
+
+</html>
