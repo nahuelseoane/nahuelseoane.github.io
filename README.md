@@ -4,7 +4,7 @@ Welcome to my personal portfolio website! This project showcases my work, skills
 
 🌐 Live Demo
 
-👉 https://soyjnahuel.github.io/
+👉 https://nahuelseoane.github.io/
 
 📁 Project Structure
 
