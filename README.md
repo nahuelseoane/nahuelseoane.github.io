@@ -13,8 +13,8 @@ Welcome to my personal portfolio website! This project showcases my work, skills
 │   ├── css
 │   │   └── main.css      # Stylesheet
 │   └── js
-│       └── main.js       # JavaScript for interactivity
-├── images                # Profile picture and social/media icons
+│   │   └── main.js       # JavaScript for interactivity
+│   └── images            # Profile picture and social/media icons
 └── README.md             # Project description
 
 ✨ Features
@@ -57,7 +57,7 @@ Add screenshots of the site here if desired.
 
 Clone this repository:
 
-git clone https://github.com/soyjnahuel/soyjnahuel.github.io
+git clone https://github.com/nahuelseoane/nahuelseoane.github.io
 
 Open index.html in your browser.
 
