@@ -6,6 +6,9 @@ document.addEventListener('DOMContentLoaded', async () => {
     initPortfolioHover?.();
     initDarkMode?.();
 
+    // Init Formspree protections
+    initFormGuards();
+
     document.dispatchEvent(new Event('sidebar:ready'));
     document.dispatchEvent(new Event('footer:ready'));
 });
@@ -74,7 +77,7 @@ function initSmoothScroll() {
 }
 
 function initPortfolioHover() {
-    const imgs = document.querySelectorAll('#portfolio .item img');
+    const imgs = document.querySelectorAll('#portfolio .project img');
     imgs.forEach(img => {
         img.addEventListener('mouseover', () => (img.style.transform = 'scale(1.05)'));
         img.addEventListener('mouseout', () => (img.style.transform = 'scale(1)'));
@@ -97,14 +100,42 @@ function initDarkMode() {
     btn.addEventListener('click', () => {
         const on = document.body.classList.toggle('dark-mode');
         // btn.textContent = on ? 'Light Mode' : 'Dark Mode';
-        if (document.body.classList.contains("dark-mode")) {
+
+        if (on) {
             document.body.style.background = "#222";
             document.body.style.color = "white";
-            toggleButton.textContent = "Light Mode";
+            btn.textContent = "Light Mode";
         } else {
             document.body.style.background = "#f4f4f4";
             document.body.style.color = "#333";
-            toggleButton.textContent = "Dark Mode";
+            btn.textContent = "Dark Mode";
         }
     });
+}
+
+
+function initFormGuards() {
+  const form = document.getElementById('contact-form');
+  if (!form) return;
+
+  // avoid double-binding if you re-run after dynamic loads
+  if (form.dataset.bound === '1') return;
+  form.dataset.bound = '1';
+
+  const loadTs = Date.now();
+  const loadField = document.getElementById('form_load_ts');
+  const delayField = document.getElementById('submit_delay_ms');
+  if (loadField) loadField.value = loadTs;
+
+  form.addEventListener('submit', (e) => {
+    if (delayField) delayField.value = Date.now() - loadTs;
+
+    // Guard: if submitted too fast, likely a bot
+    const ms = Number(delayField?.value || 0);
+    if (ms && ms < 1200) {
+      // You can show a friendly message instead of silently blocking
+      // alert('Please take a second to complete the form.');
+      e.preventDefault();
+    }
+  });
 }
