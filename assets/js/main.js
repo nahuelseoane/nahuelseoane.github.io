@@ -90,27 +90,72 @@ function initDarkMode() {
     if (!btn) {
         btn = document.createElement('button');
         btn.id = 'dark-mode-toggle';
-        btn.textContent = 'Dark Mode';
+        // btn.textContent = 'Dark Mode';
         btn.classList.add('button');
         btn.style.position = 'fixed';
         btn.style.top = '20px';
         btn.style.right = '20px';
         document.body.appendChild(btn);
     }
+
+    const mql = window.matchMedia('(max-width: 768px)');
+    const place = () => {
+    if (mql.matches) {
+        btn.style.position = 'fixed';
+        btn.style.top = '8px';
+        btn.style.right = '8px';
+        btn.style.fontSize = '14px';
+        btn.style.padding = '6px 10px';
+    } else {
+        btn.style.position = 'fixed';
+        btn.style.top = '20px';
+        btn.style.right = '20px';
+        btn.style.fontSize = '16px';
+        btn.style.padding = '10px 14px';
+    }
+    };
+    place();
+    mql.addEventListener ? mql.addEventListener('change', place) : mql.addListener(place);
+    let on = document.body.classList.contains('dark-mode');
+
+    const setLabel = () => {
+    btn.textContent = mql.matches
+        ? (on ? 'Light' : 'Dark')         // small screens
+        : (on ? 'Light Mode' : 'Dark Mode'); // larger screens
+    };
+
+    setLabel();
+
     btn.addEventListener('click', () => {
-        const on = document.body.classList.toggle('dark-mode');
-        // btn.textContent = on ? 'Light Mode' : 'Dark Mode';
+        // const on = document.body.classList.toggle('dark-mode');
+        on = !on;
+        document.body.classList.toggle('dark-mode', on);
+        
 
         if (on) {
             document.body.style.background = "#222";
             document.body.style.color = "white";
-            btn.textContent = "Light Mode";
+            // btn.style.color = "#f4f4f4";
+            document.querySelectorAll('.button').forEach(el => {
+                el.style.borderColor = '#f4f4f4';
+            });
         } else {
             document.body.style.background = "#f4f4f4";
             document.body.style.color = "#333";
-            btn.textContent = "Dark Mode";
+            // btn.style.color = "#333";
+            document.querySelectorAll('.button').forEach(el => {
+                el.style.borderColor = '#333';
+            });
         }
+
+        // btn.textContent = on ? 'Light Mode' : 'Dark Mode';
+        setLabel();
     });
+
+    // Update text when viewport crosses the breakpoint
+    const mqHandler = () => setLabel();
+    if (mql.addEventListener) mql.addEventListener('change', mqHandler);
+    else mql.addListener(mqHandler); // older Safari fallbac
 }
 
 

@@ -36,8 +36,7 @@
 
             <div class="container">
                 <h3>💻 Step 1: Downloading the Excel File from Banco Provincia</h3>
-                <img id="gif1" src="../assets/gifs/transfers_download.gif" alt="Bank download GIF"
-                    style="max-width: 60%; height: auto;">
+                <img id="gif1" class="gifs" src="../assets/gifs/transfers_download.gif" alt="Bank download GIF">
                 <br>
                 <button class="btn" onclick="replayGif('gif1')">🔃 Replay</button>
                 <p>The script uses Selenium to log into the bank and download the latest Excel with all transactions.
@@ -47,8 +46,7 @@
 
             <div class="container">
                 <h3>📊 Step 2: Updating the Master Excel</h3>
-                <img src="../assets/gifs/transfers_update.gif" alt="Excel update GIF"
-                    style="max-width: 100%; height: auto;">
+                <img id="gif2" class="gifs" src="../assets/gifs/transfers_update.gif" alt="Excel update GIF">
                 <br>
                 <button class="btn" onclick="replayGif('gif2')">🔃 Replay</button>
                 <p>It compares "<code>N° Secuencia</code>" values to avoid duplicates and inserts new rows with
@@ -58,8 +56,7 @@
 
             <div class="container">
                 <h3>🌐 Step 3: Loading Payments into Sytech</h3>
-                <img id="gif3" src="../assets/gifs/sytech_upload.gif" alt="Sytech automation GIF"
-                    style="max-width: 60%; height: auto;">
+                <img id="gif3" class="gifs" src="../assets/gifs/sytech_upload.gif" alt="Sytech automation GIF">
                 <br>
                 <button class="btn" onclick="replayGif('gif3')">🔃 Replay</button>
                 <p>The script searches for each client and automatically registers the payment with the right method.
@@ -67,8 +64,7 @@
             </div>
             <div class="container">
                 <h3>📨 Step 4: Sending emails with receipt</h3>
-                <img id="gif4" src="../assets/gifs/emails.gif" alt="Emails sending GIF"
-                    style="max-width: 60%; height: auto;">
+                <img id="gif4" class="gifs" src="../assets/gifs/emails.gif" alt="Emails sending GIF">
                 <br>
                 <button class="btn" onclick="replayGif('gif4')">🔃 Replay</button>
                 <p>It sends an email to all users with the payment's receipt attached to it</p>

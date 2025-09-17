@@ -207,9 +207,32 @@ nav ul li a:hover {
     color: #00bcd4;
 }
 
+/* svg icons */
+.material-symbols-outlined{
+  font-family: 'Material Symbols Outlined' !important;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 20px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;                /* important: no uppercase/capitalize */
+  display: inline-block;
+  white-space: nowrap;
+  direction: ltr;
+  font-variant-ligatures: normal;      /* ensure ligatures are allowed */
+  font-feature-settings: 'liga' 1;     /* standard property */
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+
+  font-variation-settings: 'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 24;
+  margin-right: 8px;
+  vertical-align: -3px;
+}
+
+
 /* Sections */
 section {
-    margin-bottom: 150px;
+    margin-bottom: 200px;
 }
 
 #main {
@@ -302,6 +325,7 @@ form input[type="submit"] {
     padding: 10px 20px;
     text-decoration: none;
     border-radius: 5px;
+    border: 2px solid #333;
     transition: 0.3s;
 }
 
@@ -324,9 +348,10 @@ form input[type="submit"] {
         --fs-base: clamp(17px, 1vw + 14px, 19px);
     }
 
-    /* #main {
-        margin-left: 0 !important;
-        width: 100% !important;
+    /* .button {
+        height: 20px;
+        width: 20px;
+
     } */
 
     #sidebar {
