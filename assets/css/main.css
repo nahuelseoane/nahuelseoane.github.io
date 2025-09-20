@@ -72,7 +72,7 @@ h5 {
 }
 
 .container {
-    width: 80%;
+    width: 85%;
     margin: auto;
     overflow: hidden;
     margin-bottom: 50px;
@@ -80,6 +80,7 @@ h5 {
 
 /* Sidebar */
 #sidebar {
+    padding-right: 1rem;
     width: var(--sidebar-w);
     background: var(--sidebar-bg);
     background-image:
@@ -97,12 +98,37 @@ h5 {
     height: 100vh;
     padding: 20px;
     transition: transform 0.3s ease-in-out;
-    /* overflow-y: auto; */
     left: 0;
     top: 0;
     z-index: 1000;
 }
+.sidebar-name {
+    font-weight: 500;
+    margin: 0.2rem 0 1rem;
+    color: #fff;
+    text-align: center;
+    letter-spacing: 0.5px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: clamp(1.8rem, 2vw, 2rem);
+}
+.sidebar-name .initials {
+    display: none;
+}
 
+.sidebar-name .full-name {
+    display: inline;
+}
+.sidebar-title {
+    font-size: clamp(0.8rem, 1vw, 1rem);
+    font-weight: 500;
+    margin: 0.2rem 0 1rem;
+    color: #fff;
+    text-align: center;
+    letter-spacing: 0.5px;
+    /* text-transform: uppercase; */
+    opacity: 0.8;
+    font-family: 'JetBrains Mono', monospace;
+}
 #sidebar h2,
 h3 {
     margin: 0;
@@ -270,6 +296,33 @@ section {
     transform: scale(1.05);
 }
 
+/* Certificates */
+/* #certificates {
+    padding: 2rem;
+} */
+.cert-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding-top: 1rem;  
+}
+
+.cert-grid a {
+    display: block;
+    width: clamp(200px, 20vw, 280px);
+    transition: transform 0.3s;
+}
+
+.cert-grid a:hover {
+    transform: scale(1.05);
+}
+
+.cert-grid img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
 
 /* Contact Form */
 form {
@@ -347,20 +400,16 @@ form input[type="submit"] {
 @media screen and (max-width:768px) {
     :root {
         --fs-base: clamp(17px, 1vw + 14px, 19px);
+        --sidebar-w: 180px;
     }
-
-    /* .button {
-        height: 20px;
-        width: 20px;
-
-    } */
-
+    .index li a span:not(.material-symbols-outlined) {
+        display: none;
+    }
     #sidebar {
         height: 100vh;
         transform: translateX(-100%);
         overflow: visible;
-        /* position: fixed; */
-        /* z-index: 1000; */
+        width: var(--sidebar-w);
     }
 
     #sidebar.open {
@@ -371,6 +420,14 @@ form input[type="submit"] {
         transform: translateX(-100%);
     }
 
+
+    .sidebar-name .full-name {
+        display: none;
+    }
+    .sidebar-name .initials {
+        display: inline;
+    }
+
     #main,
     #footer {
         margin-left: 0 !important;
@@ -378,12 +435,12 @@ form input[type="submit"] {
     }
 
     #toggle-sidebar {
+        left: calc(var(--sidebar-w) + 5px);
         width: 56px;
         height: 56px;
         font-size: 26px;
         border-radius: 12px;
         right: -12px;
-        /* left: 100px; */
         top: 10px;
         z-index: 1100;
     }
