@@ -40,26 +40,20 @@ function initSidebarToggle() {
     const sidebar = document.getElementById("sidebar");
     const toggle = document.getElementById("toggle-sidebar");
     const main = document.getElementById("main");
-    if (!sidebar || !toggle || !main) return;
+    const icon = document.getElementById("toggle-sidebar-icon");
 
-    // avoid double-binding if this runs twice
+    if (!sidebar || !toggle || !main || !icon) return;
+
+    // avoid double-binding
     if (toggle.dataset.bound === '1') return;
     toggle.dataset.bound = '1';
 
     // Sidebar toggle
     toggle.addEventListener("click", () => {
-        const isMobile = window.matchMedia("(max-width: 768px)").matches;
-
-        if (isMobile) {
-            //overlay drawer
-            sidebar.classList.toggle("open");
-            document.body.classList.toggle("menu-open", sidebar.classList.contains("open"));
-        } else {
-            // desktop push
-            sidebar.classList.toggle("hidden");
-            main.classList.toggle("expanded");
-            document.body.classList.toggle("sidebar-closed", sidebar.classList.contains("hidden"));
-        }
+        const isHidden = sidebar.classList.toggle("hidden");
+        main.classList.toggle("expanded", isHidden);
+        document.body.classList.toggle("sidebar-closed", isHidden);
+        icon.className = isHidden ? "fas fa-arrow-right" : "fas fa-arrow-left";
     });
 };
 
