@@ -190,21 +190,13 @@ body.dark-mode #sidebar {
     flex-wrap: wrap;
     position: absolute;
     margin-top: 20px;
-    /* bottom: 35px;
-    left: 50%; */
-    /* transform: translateX(-50%); */
 }
 
-/* .social-icon {
-    width: 28px;
-    height: 28px;
-    transition: transform 0.3s ease-in-out;
-} */
 .social-icon {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: white;
+    background-color: #f4fafd;
     color: var(--brand);
     border-radius: 50%;
     width: 44px;

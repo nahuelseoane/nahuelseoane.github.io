@@ -1,15 +1,36 @@
-const MATERIAL_SYMBOLS_URL =
-  'https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined'; 
+// Google Icons
+const MATERIAL_SYMBOLS_URL = 'https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined'; 
 
 function ensureMaterialSymbols() {
-  if (document.querySelector('link[data-material-symbols]')) return;
-  const link = document.createElement('link');
-  link.rel = 'stylesheet';
-  link.href = MATERIAL_SYMBOLS_URL;
-  link.setAttribute('data-material-symbols', '1');
-  document.head.appendChild(link);
+    if (document.querySelector('link[data-material-symbols]')) return;
+    const link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.href = MATERIAL_SYMBOLS_URL;
+    link.setAttribute('data-material-symbols', '1');
+    document.head.appendChild(link);
 }
-ensureMaterialSymbols();
+
+// Font Awesome
+function loadFontAwesome() {
+    const existing = document.querySelector('link[data-font-awesome]');
+    if (existing) return; // Already loaded
+
+    const link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css';
+    link.integrity = 'sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==';
+    link.crossOrigin = 'anonymous';
+    link.referrerPolicy = 'no-referrer';
+    link.setAttribute('data-font-awesome', '1');
+
+    document.head.appendChild(link);
+}
+
+function loadAllIconFonts() {
+    loadFontAwesome();
+    ensureMaterialSymbols();
+}
+loadAllIconFonts();
 
 document.addEventListener('sidebar:ready', () => {
     const nav = document.querySelector('#sidebar nav ul.index');
