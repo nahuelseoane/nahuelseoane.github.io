@@ -102,8 +102,9 @@ h5 {
     left: 0;
     top: 0;
     z-index: 1000;
-    line-height: 1.2;
+    line-height: 1;
 }
+
 .sidebar-name {
     font-weight: 500;
     margin: 0.2rem 0 1rem;
@@ -111,7 +112,7 @@ h5 {
     text-align: center;
     letter-spacing: 0.5px;
     font-family: 'JetBrains Mono', monospace;
-    font-size: clamp(1.8rem, 2vw, 2rem);
+    font-size: clamp(1.6rem, 1.8vw, 1.8rem);
 }
 .sidebar-name .initials {
     display: none;
@@ -121,7 +122,7 @@ h5 {
     display: inline;
 }
 .sidebar-title {
-    font-size: clamp(0.8rem, 1vw, 1rem);
+    font-size: clamp(0.6rem, 0.8vw, 0.8rem);
     font-weight: 500;
     margin: 0.2rem 0 1rem;
     color: #fff;
@@ -173,10 +174,11 @@ body.dark-mode #sidebar {
 
 .index {
     padding: 0px;
-    margin-top: 20px;
+    margin-top: 35px;
     list-style: none;
     display: flex;
     flex-direction: column;
+    flex-shrink: 1;
 }
 
 .icons {
@@ -237,7 +239,7 @@ nav ul {
 nav ul li a {
     color: white;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 16px;
     transition: 0.3s;
 }
 
@@ -415,10 +417,13 @@ form input[type="submit"] {
     }
     #sidebar {
         padding: 10px;
-        height: 100vh;
-        /* transform: translateX(-100%); */
-        overflow: visible;
+        /* height: 100vh; */
+        /* overflow: visible; */
         width: var(--sidebar-w);
+        /* line-height: 0.8; */
+        overflow: hidden;
+        overflow-y: auto;
+        max-height: 100vh;
     }
 
     #sidebar.open {
@@ -455,7 +460,7 @@ form input[type="submit"] {
     }
     .icons {
         gap: 10px;
-        margin-bottom: 30px;
+        /* margin-bottom: 30px; */
     }
 
 
