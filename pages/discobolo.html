@@ -28,8 +28,7 @@
         <section id="discobolo-details">
             <div class="container">
                 <h1>🌀 Automating Discóbolo – Full Walkthrough</h1>
-                <p>Automates downloading bank transactions, updating master Excel files, and loading them into a web
-                    system.
+                <p>It automates the download of bank transactions, updates them into a master Excel file, and then loads them into an online payment system called Sytech.”
                 </p>
             </div>
 
@@ -39,7 +38,7 @@
                 <img id="gif1" class="gifs" src="../assets/gifs/transfers_download.gif" alt="Bank download GIF">
                 <br>
                 <button class="btn" onclick="replayGif('gif1')">🔃 Replay</button>
-                <p>The script uses Selenium to log into the bank and download the latest Excel with all transactions.
+                <p>The script uses Selenium to log into the bank’s website and download the latest transactions in Excel format.
                 </p>
             </div>
 
@@ -49,9 +48,7 @@
                 <img id="gif2" class="gifs" src="../assets/gifs/transfers_update.gif" alt="Excel update GIF">
                 <br>
                 <button class="btn" onclick="replayGif('gif2')">🔃 Replay</button>
-                <p>It compares "<code>N° Secuencia</code>" values to avoid duplicates and inserts new rows with
-                    formatting
-                    preserved.</p>
+                <p>It uses "<code>N° Secuencia</code>" field as a reference to insert the new values. Then, it takes the <b>DNI or CUIL</b> from the transfer description to identify the user in an Excel database. Finally, it determines the correct concept (tenis, payment, events, etc.) and the corresponding <b>group leader</b>, while avoiding duplicates in the newly inserted rows and preserving the formatting.</p>
             </div>
 
             <div class="container">
@@ -59,7 +56,7 @@
                 <img id="gif3" class="gifs" src="../assets/gifs/sytech_upload.gif" alt="Sytech automation GIF">
                 <br>
                 <button class="btn" onclick="replayGif('gif3')">🔃 Replay</button>
-                <p>The script searches for each client and automatically registers the payment with the right method.
+                <p>The script searches for each <b>client</b> in the master Excel with all the updated transfers and automatically registers the payment in the online payment site with the right method.
                 </p>
             </div>
             <div class="container">
@@ -67,7 +64,7 @@
                 <img id="gif4" class="gifs" src="../assets/gifs/emails.gif" alt="Emails sending GIF">
                 <br>
                 <button class="btn" onclick="replayGif('gif4')">🔃 Replay</button>
-                <p>It sends an email to all users with the payment's receipt attached to it</p>
+                <p>It sends an email to all users with the payment's receipt attached to it, a <b>PDF</b> previously downloaded and with the correct identifier.</p>
             </div>
         </section>
 
