@@ -102,6 +102,7 @@ h5 {
     left: 0;
     top: 0;
     z-index: 1000;
+    line-height: 1.2;
 }
 .sidebar-name {
     font-weight: 500;
@@ -172,7 +173,7 @@ body.dark-mode #sidebar {
 
 .index {
     padding: 0px;
-    margin-top: 50px;
+    margin-top: 20px;
     list-style: none;
     display: flex;
     flex-direction: column;
@@ -182,16 +183,15 @@ body.dark-mode #sidebar {
     margin: 0;
     padding: 0;
     display: flex;
-    gap: 24px;
+    gap: 22px;
     justify-content: center;
     flex-wrap: wrap;
     
     margin-top: auto;
     list-style: none;
-    padding-bottom: 40px;
+    padding-bottom: 30px;
     overflow-y: auto;
-    /* align-items: center; */
-    /* position: absolute; */
+    align-items: center;
 }
 .icons li {
     display: flex;
@@ -201,10 +201,10 @@ body.dark-mode #sidebar {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 44px;
-    height: 44px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
-    font-size: 20px;
+    font-size: 18px;
     background-color: #f4fafd;
     color: var(--brand);
     text-decoration: none;
@@ -308,10 +308,6 @@ section {
     transform: scale(1.05);
 }
 
-/* Certificates */
-/* #certificates {
-    padding: 2rem;
-} */
 .cert-grid {
     display: flex;
     flex-wrap: wrap;
@@ -321,7 +317,7 @@ section {
 
 .cert-grid a {
     display: block;
-    width: clamp(200px, 20vw, 280px);
+    width: clamp(160px, 16vw, 220px);
     transition: transform 0.3s;
 }
 
@@ -459,7 +455,7 @@ form input[type="submit"] {
     }
     .icons {
         gap: 10px;
-        bottom: 25px;
+        margin-bottom: 30px;
     }
 
 
