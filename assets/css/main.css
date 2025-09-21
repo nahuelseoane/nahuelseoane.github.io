@@ -181,24 +181,41 @@ body.dark-mode #sidebar {
 }
 
 .icons {
-    padding: 0px;
     list-style: none;
-    position: absolute;
-    bottom: 35px;
-    left: 50%;
-    transform: translateX(-50%);
     display: flex;
-    gap: 30px;
+    padding: 0px;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    position: absolute;
+    margin-top: 20px;
+    /* bottom: 35px;
+    left: 50%; */
+    /* transform: translateX(-50%); */
 }
 
-.social-icon {
+/* .social-icon {
     width: 28px;
     height: 28px;
     transition: transform 0.3s ease-in-out;
+} */
+.social-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    color: var(--brand);
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    text-decoration: none;
+    font-size: 20px;
+    transition: transform 0.2s ease, background-color 0.3s;
 }
-
 .social-icon:hover {
     transform: scale(1.1);
+    background-color: #3a9b7a;
 }
 
 /* Profile Picture */
@@ -398,18 +415,18 @@ form input[type="submit"] {
 @media screen and (max-width:768px) {
     :root {
         --fs-base: clamp(17px, 1vw + 14px, 19px);
-        --sidebar-w: 180px;
+        --sidebar-w: 160px;
     }
     .index li a span:not(.material-symbols-outlined) {
         display: none;
     }
     #sidebar {
+        padding: 10px;
         height: 100vh;
         /* transform: translateX(-100%); */
         overflow: visible;
         width: var(--sidebar-w);
     }
-
 
     #sidebar.open {
         transform: translateX(-100%);
@@ -419,6 +436,16 @@ form input[type="submit"] {
         transform: translateX(0);
     }
 
+    #toggle-sidebar {
+        left: calc(var(--sidebar-w) - 6px);
+        width: 48px;
+        height: 48px;
+        font-size: 20px;
+        border-radius: 12px;
+        right: -12px;
+        top: 10px;
+        z-index: 1100;
+    }
 
     .sidebar-name .full-name {
         display: none;
@@ -427,20 +454,23 @@ form input[type="submit"] {
         display: inline;
     }
 
+
+    .social-icon {
+        width: 32px;
+        height: 32px;
+        font-size: 16px;
+    }
+    .icons {
+        gap: 10px;
+        bottom: 25px;
+    }
+
+
     #main,
     #footer {
         margin-left: 0 !important;
         width: 100% !important;
     }
 
-    #toggle-sidebar {
-        left: calc(var(--sidebar-w) + 5px);
-        width: 56px;
-        height: 56px;
-        font-size: 26px;
-        border-radius: 12px;
-        right: -12px;
-        top: 10px;
-        z-index: 1100;
-    }
+
 }
