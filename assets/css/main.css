@@ -327,7 +327,7 @@ section {
 
 .cert-grid a {
     display: block;
-    width: clamp(160px, 16vw, 220px);
+    width: clamp(150px, 15vw, 200px);
     transition: transform 0.3s;
 }
 
