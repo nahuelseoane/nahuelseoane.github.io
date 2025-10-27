@@ -132,7 +132,10 @@ function initDarkMode() {
             // btn.style.color = "#f4f4f4";
             document.querySelectorAll('.button').forEach(el => {
                 el.style.borderColor = '#f4f4f4';
-            });
+            });  
+            document.querySelectorAll('.project').forEach(el => {
+                el.style.backgroundColor = "#333333";
+                });
         } else {
             document.body.style.background = "#f4f4f4";
             document.body.style.color = "#333";
@@ -140,6 +143,9 @@ function initDarkMode() {
             document.querySelectorAll('.button').forEach(el => {
                 el.style.borderColor = '#333';
             });
+            document.querySelectorAll('.project').forEach(el => {
+                el.style.backgroundColor = "white";
+                });
         }
 
         // btn.textContent = on ? 'Light Mode' : 'Dark Mode';

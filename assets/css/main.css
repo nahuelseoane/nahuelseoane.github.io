@@ -295,6 +295,22 @@ section {
     transition: margin-left 0.3s;
 }
 
+/* Project */
+.project-list {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1.5rem; 
+}
+
+.project {
+    background-color: white;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+                0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    border-radius: 0.5rem;
+    padding: 1.25rem;
+}
+
+
 /* when sidebar is hidden on desktop */
 #main.expanded {
     margin-left: 0;
@@ -473,7 +489,9 @@ form input[type="submit"] {
         /* margin-right: 4px;
         margin-left: 4px; */
     }
-
+    .profile-list {
+        grid-template-columns: repeat((1, 1fr));
+    }
     #main,
     #footer {
         margin-left: 0 !important;
