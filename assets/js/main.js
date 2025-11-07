@@ -13,6 +13,11 @@ document.addEventListener('DOMContentLoaded', async () => {
     document.dispatchEvent(new Event('footer:ready'));
 });
 
+document.getElementById("enter-btn").addEventListener("click", function() {
+    const welcome = document.getElementById("welcome-screen");
+    welcome.classList.add("fade-out");
+});
+
 async function loadSidebar() {
     const ph = document.getElementById('sidebar-placeholder');
     if (!ph) return;

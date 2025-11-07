@@ -283,6 +283,58 @@ nav ul li a:hover {
   vertical-align: -3px;
 }
 
+/* Welcome */
+/* --- Fullscreen welcome section --- */
+#welcome-screen {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(135deg, #0a0a0a, #1e1e1e);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  z-index: 9999;
+  transition: opacity 1s ease, visibility 1s;
+}
+
+.welcome-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.welcome-content p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  opacity: 0.8;
+}
+
+.welcome-content button {
+  padding: 0.8em 1.5em;
+  font-size: 1rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.welcome-content button:hover {
+  background-color: #0056b3;
+}
+
+/* --- Fade-out animation --- */
+#welcome-screen.fade-out {
+  opacity: 0;
+  visibility: hidden;
+}
+
+
+
 
 /* Sections */
 section {
