@@ -13,10 +13,24 @@ document.addEventListener('DOMContentLoaded', async () => {
     document.dispatchEvent(new Event('footer:ready'));
 });
 
+// Welcome typing effect
+const text = "Hey, I'm Nahuel 👋";
+let i = 0;
+function type() {
+  if (i < text.length) {
+    document.getElementById("intro").innerHTML += text.charAt(i);
+    i++;
+    setTimeout(type, 100);
+  }
+}
+window.onload = type;
+
+// Welcome fading effect
 document.getElementById("enter-btn").addEventListener("click", function() {
     const welcome = document.getElementById("welcome-screen");
     welcome.classList.add("fade-out");
 });
+
 
 async function loadSidebar() {
     const ph = document.getElementById('sidebar-placeholder');
