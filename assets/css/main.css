@@ -694,6 +694,14 @@ form input[type="submit"] {
         min-height: 120px;
         margin-bottom: 0.8rem;
     }
+
+    .welcome-content h1 {
+        font-size: 1.6rem;
+    }
+
+    #intro {
+        font-size: 1.2rem;
+    }
 }
 
 @media screen and (max-width: 500px) {
@@ -709,5 +717,13 @@ form input[type="submit"] {
         max-width: 150px;
         max-height: 150px;
         margin-bottom: 0.5rem;
+    }
+
+    .welcome-content h1 {
+        font-size: 1.4rem;
+    }
+
+    #intro {
+        font-size: 1rem;
     }
 }
