@@ -1,18 +1,3 @@
-document.addEventListener('DOMContentLoaded', async () => {
-    await loadSidebar();
-    await loadFooter();
-    initSidebarToggle();
-    initSmoothScroll?.();
-    initPortfolioHover?.();
-    initDarkMode?.();
-
-    // Init Formspree protections
-    initFormGuards();
-
-    document.dispatchEvent(new Event('sidebar:ready'));
-    document.dispatchEvent(new Event('footer:ready'));
-});
-
 // Welcome typing effect
 const text = "Hey, I'm Nahuel 👋";
 let i = 0;
@@ -31,6 +16,21 @@ document.getElementById("enter-btn").addEventListener("click", function() {
     welcome.classList.add("fade-out");
 });
 
+// Loading all events
+document.addEventListener('DOMContentLoaded', async () => {
+    await loadSidebar();
+    await loadFooter();
+    initSidebarToggle();
+    initSmoothScroll?.();
+    initPortfolioHover?.();
+    initDarkMode?.();
+
+    // Init Formspree protections
+    initFormGuards();
+
+    document.dispatchEvent(new Event('sidebar:ready'));
+    document.dispatchEvent(new Event('footer:ready'));
+});
 
 async function loadSidebar() {
     const ph = document.getElementById('sidebar-placeholder');
