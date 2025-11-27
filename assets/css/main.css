@@ -841,9 +841,11 @@ form input[type="submit"] {
         /* margin-right: 4px;
         margin-left: 4px; */
     }
-    .profile-list {
-        grid-template-columns: repeat((1, 1fr));
+
+    .project-list {
+        grid-template-columns: repeat(1, 1fr);
     }
+
     #main,
     #footer {
         margin-left: 0 !important;
