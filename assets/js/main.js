@@ -99,84 +99,31 @@ function initPortfolioHover() {
 
 // ========== DARK MODE ==========
 function initDarkMode() {
-    let btn = document.getElementById('dark-mode-toggle');
-    if (!btn) {
-        btn = document.createElement('button');
-        btn.id = 'dark-mode-toggle';
-        // btn.textContent = 'Dark Mode';
-        btn.classList.add('button');
-        btn.style.position = 'fixed';
-        btn.style.top = '20px';
-        btn.style.right = '20px';
-        document.body.appendChild(btn);
-    }
+    const toggle = document.getElementById("dark-mode-switch");
+    const icon = document.getElementById("darkmode-icon");
 
-    const mql = window.matchMedia('(max-width: 768px)');
-    const place = () => {
-    if (mql.matches) {
-        btn.style.position = 'fixed';
-        btn.style.top = '8px';
-        btn.style.right = '8px';
-        btn.style.fontSize = '14px';
-        btn.style.padding = '6px 10px';
-    } else {
-        btn.style.position = 'fixed';
-        btn.style.top = '20px';
-        btn.style.right = '20px';
-        btn.style.fontSize = '16px';
-        btn.style.padding = '10px 14px';
-    }
-    };
-    place();
-    mql.addEventListener ? mql.addEventListener('change', place) : mql.addListener(place);
-    let on = document.body.classList.contains('dark-mode');
+    if (!toggle || !icon) return;
 
-    const setLabel = () => {
-    btn.textContent = mql.matches
-        ? (on ? 'Light' : 'Dark')         // small screens
-        : (on ? 'Light Mode' : 'Dark Mode'); // larger screens
-    };
+    // Restore saved state
+    const saved = localStorage.getItem("darkMode") === "on";
+    document.body.classList.toggle("dark-mode", saved);
+    toggle.checked = saved;
+    icon.textContent = saved ? "dark_mode" : "light_mode";
 
-    setLabel();
+    toggle.addEventListener("change", () => {
+        const on = toggle.checked;
+        document.body.classList.toggle("dark-mode", on);
+        localStorage.setItem("darkMode", on ? "on" : "off");
+        icon.textContent = on ? "dark_mode" : "light_mode";
 
-    btn.addEventListener('click', () => {
-        // const on = document.body.classList.toggle('dark-mode');
-        on = !on;
-        document.body.classList.toggle('dark-mode', on);
-        
-
-        if (on) {
-            document.body.style.background = "#222";
-            document.body.style.color = "white";
-            // btn.style.color = "#f4f4f4";
-            document.querySelectorAll('.button').forEach(el => {
-                el.style.borderColor = '#f4f4f4';
-            });  
-            document.querySelectorAll('.project').forEach(el => {
-                el.style.backgroundColor = "#333333";
-                });
-        } else {
-            document.body.style.background = "#f4f4f4";
-            document.body.style.color = "#333";
-            // btn.style.color = "#333";
-            document.querySelectorAll('.button').forEach(el => {
-                el.style.borderColor = '#333';
-            });
-            document.querySelectorAll('.project').forEach(el => {
-                el.style.backgroundColor = "white";
-                });
-        }
-
-        // btn.textContent = on ? 'Light Mode' : 'Dark Mode';
-        setLabel();
+        // Small animation
+        // icon.style.transform = "scale(0.85)";
+        // setTimeout(() => {
+        //     icon.textContent = on ? "dark_mode" : "light_mode";
+        //     icon.style.transform = "scale(1)";
+        // }, 120);
     });
-
-    // Update text when viewport crosses the breakpoint
-    const mqHandler = () => setLabel();
-    if (mql.addEventListener) mql.addEventListener('change', mqHandler);
-    else mql.addListener(mqHandler); // older Safari fallbac
 }
-
 
 function initFormGuards() {
   const form = document.getElementById('contact-form');
