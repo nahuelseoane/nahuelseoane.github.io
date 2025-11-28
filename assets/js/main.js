@@ -1,20 +1,30 @@
 // Welcome typing effect
-const text = "Hey, I'm Nahuel 👋";
-let i = 0;
-function type() {
-  if (i < text.length) {
-    document.getElementById("intro").innerHTML += text.charAt(i);
-    i++;
-    setTimeout(type, 100);
-  }
-}
-window.onload = type;
+document.addEventListener("DOMContentLoaded", () => {
+    const intro = document.getElementById("intro");
+    if (!intro) return;   // <-- prevent crash
+
+    const text = "Hey, I'm Nahuel 👋";
+    let i = 0;
+
+    function type() {
+        if (i < text.length) {
+            intro.innerHTML += text.charAt(i);
+            i++;
+            setTimeout(type, 100);
+        }
+    }
+
+    type();
+});
 
 // Welcome fading effect
-document.getElementById("enter-btn").addEventListener("click", function() {
-    const welcome = document.getElementById("welcome-screen");
-    welcome.classList.add("fade-out");
-});
+const enterBtn = document.getElementById("enter-btn");
+if (enterBtn) {
+    enterBtn.addEventListener("click", function() {
+        const welcome = document.getElementById("welcome-screen");
+        if (welcome) welcome.classList.add("fade-out");
+    });
+}
 
 // Loading all events
 document.addEventListener('DOMContentLoaded', async () => {
