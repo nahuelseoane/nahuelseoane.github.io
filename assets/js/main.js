@@ -56,18 +56,6 @@ async function loadSidebar() {
         // 🔥 Now attach event listeners
         // -------------------------
 
-        // Desktop toggle
-        const toggleBtn = document.getElementById("toggle-sidebar");
-        const sidebar = document.getElementById("sidebar");
-        const main = document.getElementById("main");
-
-        if (toggleBtn) {
-            toggleBtn.addEventListener("click", () => {
-                sidebar.classList.toggle("hidden");
-                main.classList.toggle("expanded");
-            });
-        }
-
         // Mobile hamburger toggle
         const mobileHamb = document.getElementById("mobile-hamburger");
         if (mobileHamb) {
