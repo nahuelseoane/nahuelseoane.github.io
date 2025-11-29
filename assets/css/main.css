@@ -786,59 +786,35 @@ form input[type="submit"] {
         --fs-base: clamp(17px, 1vw + 14px, 19px);
         --sidebar-w: 110px;
     }
-    /* .index li a span:not(.material-symbols-outlined) {
+
+    /* Hide avatar */
+    .profile-picture {
         display: none;
-    } */
-    #sidebar {
-        padding: 10px;
-        height: 100vh;
-        overflow: visible;
-        width: var(--sidebar-w);
-        line-height: 1;
     }
-
-    #toggle-sidebar {
-        left: calc(var(--sidebar-w) + 2px);
-        width: 35px;
-        height: 35px;
-        font-size: 14px;
-        border-radius: 12px;
-        right: -12px;
-        top: 10px;
-        z-index: 1100;
+    .sidebar-name {
+        text-align: center;
+        width: 100%;
     }
-
-    .profile-picture{
-        width: 80px;
-        height: 80px;
-    }
+    /* Hide full name */
     .sidebar-name .full-name {
         display: none;
     }
+    /* Show initials */
     .sidebar-name .initials {
-        display: inline;
+        background: var(--brand);
+        font-size: 3.2rem;
+        color: white;
+        width: 95px;
+        height: 95px;
+        display: flex !important;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        margin: 10px auto 18px auto;
     }
+    /* Hide the long title */
     .sidebar-title {
-        font-size: 8px;
-    }
-    .index {
-        padding: 0;
-        margin: 4px;
-        margin-top: 40px;
-        gap: 30px;
-    }
-    #sidebar .index li a {
-        font-size: 12px;
-    }
-    
-    .social-icon {
-        width: 28px;
-        height: 28px;
-        font-size: 14px;
-    }
-    .icons {
-        gap: 10px;
-        margin: 30px 4px 25px 4px;
+        display: none;
     }
 
     .project-list {
@@ -891,5 +867,134 @@ form input[type="submit"] {
 
     #intro {
         font-size: 1rem;
+    }
+}
+
+/* ------------------------------------------------------
+   MOBILE TOPBAR (hidden on desktop)
+------------------------------------------------------ */
+
+#mobile-topbar {
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    .social-icon {
+        width: 58px;
+        height: 58px;
+        font-size: 25px;
+        border-radius: 50%;
+    }
+
+    .icons {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px 20px;  /* row-gap, column-gap */
+        justify-items: center;
+        padding: 0 20px;
+        margin-top: 20px;
+        margin-bottom: 25px;
+    }
+
+    /* Nav items: bigger text + icon */
+    #sidebar .index li a {
+        font-size: 20px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    #sidebar .material-symbols-outlined {
+        font-size: 40px;
+    }
+    
+    /* Show the topbar */
+    #mobile-topbar {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 12px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 60px;
+        padding: 0 15px;
+        background: var(--sidebar-bg);
+        color: white;
+        z-index: 2000;
+        border-bottom: 1px solid rgba(255,255,255,0.15);
+    }
+
+    /* Hamburger */
+    #mobile-hamburger {
+        background: transparent;
+        border: none;
+        font-size: 26px;
+        color: var(--brand);
+        cursor: pointer;
+    }
+
+    /* Tiny avatar */
+    .mobile-avatar {
+        width: 42px;
+        height: 42px;
+        border-radius: 50%;
+        border: 2px solid var(--brand);
+        object-fit: cover;
+    }
+
+    .mobile-topbar-info {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .mobile-name {
+        margin: 0;
+        font-size: 0.95rem;
+        font-weight: 600;
+    }
+
+    .mobile-role {
+        margin: 0;
+        margin-top: -2px;
+        font-size: 0.65rem;
+        opacity: 0.7;
+    }
+
+    /* Sidebar becomes a drawer */
+    #sidebar {
+        transform: translateX(-100%);
+        transition: transform .3s ease;
+        width: 260px; /* bigger drawer works better */
+        padding-top: 80px; /* leaving space for topbar */
+        background: rgba(20,20,20,0.75);
+        backdrop-filter: blur(10px);
+    }
+
+    #sidebar nav ul {
+        align-items: flex-start;
+    }
+
+    #sidebar.open {
+        transform: translateX(0);
+    }
+
+    .darkmode-toggle { 
+        transform: scale(1.6);
+        margin-top: 100px !important;   /* move it up */
+        margin-bottom: 0 !important;
+    }
+
+    /* Hide desktop toggle button */
+    #toggle-sidebar {
+        display: none;
+    }
+
+    /* Main content moves under topbar */
+    #main {
+        margin-left: 0 !important;
+        padding-top: 80px;
     }
 }
