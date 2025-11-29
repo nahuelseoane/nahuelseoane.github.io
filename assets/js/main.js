@@ -56,7 +56,6 @@ async function loadSidebar() {
         // 🔥 Now attach event listeners
         // -------------------------
 
-        
         // Desktop toggle
         const toggleBtn = document.getElementById("toggle-sidebar");
         const sidebar = document.getElementById("sidebar");
@@ -77,6 +76,20 @@ async function loadSidebar() {
             });
         }
 
+        // NS initials: go home + close drawer
+        const initialsTap = document.getElementById("initials-tap");
+        if (initialsTap) {
+            initialsTap.addEventListener("click", () => {
+
+                // Scroll to top or profile section
+                window.location.hash = "#top";
+
+                // Close drawer if open
+                const sidebar = document.getElementById("sidebar");
+                sidebar.classList.remove("open");
+            });
+        }
+        
     } catch (e) {
         console.error('Sidebar include failed:', e)
     }
