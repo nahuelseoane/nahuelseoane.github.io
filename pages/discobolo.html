@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Space+Grotesk:wght@500;700&display=swap"
+        rel="stylesheet">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=JetBrains+Mono:wght@500;700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Syne:wght@600&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/discobolo.css">
+    <title>Discobolo Automating</title>
+</head>
+
+<body class="page-discobolo">
+    <!-- Sidebar -->
+    <div id="sidebar-placeholder" data-src="../partials/sidebar.html"></div>
+
+    <div id="main">
+        <section id="discobolo-details">
+            <div class="container">
+                <h1>🌀 Automating Discóbolo – Full Walkthrough</h1>
+                <p>It automates the download of bank transactions, updates them into a master Excel file, and then loads them into an online payment system called Sytech.”
+                </p>
+            </div>
+
+
+            <div class="container">
+                <h3>💻 Step 1: Downloading the Excel File from Banco Provincia</h3>
+                <img id="gif1" class="gifs" src="../assets/gifs/transfers_download.gif" alt="Bank download GIF">
+                <br>
+                <button class="btn" onclick="replayGif('gif1')">🔃 Replay</button>
+                <p>The script uses Selenium to log into the bank’s website and download the latest transactions in Excel format.
+                </p>
+            </div>
+
+
+            <div class="container">
+                <h3>📊 Step 2: Updating the Master Excel</h3>
+                <img id="gif2" class="gifs" src="../assets/gifs/transfers_update.gif" alt="Excel update GIF">
+                <br>
+                <button class="btn" onclick="replayGif('gif2')">🔃 Replay</button>
+                <p>It uses "<code>N° Secuencia</code>" field as a reference to insert the new values. Then, it takes the <b>DNI or CUIL</b> from the transfer description to identify the user in an Excel database. Finally, it determines the correct concept (tenis, payment, events, etc.) and the corresponding <b>group leader</b>, while avoiding duplicates in the newly inserted rows and preserving the formatting.</p>
+            </div>
+
+            <div class="container">
+                <h3>🌐 Step 3: Loading Payments into Sytech</h3>
+                <img id="gif3" class="gifs" src="../assets/gifs/sytech_upload.gif" alt="Sytech automation GIF">
+                <br>
+                <button class="btn" onclick="replayGif('gif3')">🔃 Replay</button>
+                <p>The script searches for each <b>client</b> in the master Excel with all the updated transfers and automatically registers the payment in the online payment site with the right method.
+                </p>
+            </div>
+            <div class="container">
+                <h3>📨 Step 4: Sending emails with receipt</h3>
+                <img id="gif4" class="gifs" src="../assets/gifs/emails.gif" alt="Emails sending GIF">
+                <br>
+                <button class="btn" onclick="replayGif('gif4')">🔃 Replay</button>
+                <p>It sends an email to all users with the payment's receipt attached to it, a <b>PDF</b> previously downloaded and with the correct identifier.</p>
+            </div>
+        </section>
+
+        <div class="container">
+            <a href="https://github.com/Nahuelseoane/AutoDiscoEmails" target="_blank">
+                👉 [View GitHub Repo]
+            </a>
+        </div>
+        <br>
+    </div>
+
+    <div id="footer-placeholder" data-src="../partials/footer.html"></div>
+
+
+    <!-- Scripts -->
+
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/discobolo.js"></script>
+</body>
+
+</html>
