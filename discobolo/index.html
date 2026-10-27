@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The website and automations I build and maintain for Club de Deportes Discóbolo, a tennis club in Haedo founded in 1916.">
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/case-study.css">
+    <link rel="stylesheet" href="../assets/css/lightbox.css">
+
+    <link rel="canonical" href="https://jnahuel.com/discobolo/">
+    <title>Club Discóbolo: Website and Automations | Nahuel Seoane</title>
+</head>
+
+<body class="page-case-study">
+    <div id="sidebar-placeholder" data-src="../partials/sidebar.html"></div>
+
+    <main id="main">
+        <article id="discobolo-hub">
+            <header class="container">
+                <p class="hero-eyebrow">Club Operations · Haedo, Buenos Aires</p>
+                <h1>Club Discóbolo: Website and Automations</h1>
+                <p class="case-study-intro">
+                    Club de Deportes Discóbolo is a tennis club in Haedo, Buenos Aires, founded on 25 May 1916.
+                    I build and maintain the club's website and the automations behind its day-to-day
+                    operations: member communication, payments, and reports.
+                </p>
+                <nav class="related-links" aria-label="Club website">
+                    <a class="button" href="https://clubdiscobolo.com/">Visit clubdiscobolo.com</a>
+                </nav>
+            </header>
+
+            <section class="container case-study-section" aria-labelledby="website-title">
+                <h2 id="website-title">The Club Website</h2>
+                <p>
+                    <a href="https://clubdiscobolo.com/">clubdiscobolo.com</a> is the club's public site, in Spanish:
+                    history, activities, Interclubes, contact details and opening hours, plus the privacy policy for
+                    the club's Google integrations.
+                </p>
+                <img class="gifs" src="../assets/images/clubdiscobolo-home.jpg" alt="Home page of clubdiscobolo.com with the club crest on a dark green background" data-lightbox>
+                <ul>
+                    <li>Plain HTML and CSS with no build step, so it stays simple to maintain.</li>
+                    <li>Deployed on Cloudflare Pages: every push to <code>main</code> publishes the site.</li>
+                    <li>Self-hosted fonts and a strict Content Security Policy: no third-party requests.</li>
+                    <li>Served from the club's own domain.</li>
+                </ul>
+                <div class="technology-list" aria-label="Website technologies">
+                    <span>HTML</span><span>CSS</span><span>Cloudflare Pages</span><span>Git</span>
+                </div>
+            </section>
+
+            <section class="container case-study-section" aria-labelledby="automations-title">
+                <h2 id="automations-title">Automations</h2>
+                <div class="reliability-grid">
+                    <div>
+                        <h3>Weekly Interclubes email</h3>
+                        <p>
+                            Builds the weekend's matches from the Asociación Argentina de Tenis public fixtures.
+                            Reviewers check it first; then a GitHub Actions workflow sends it to members.
+                        </p>
+                    </div>
+                    <div>
+                        <h3>Birthday greetings</h3>
+                        <p>
+                            Sends members a greeting on their birthday, using the club's Google contacts and Gmail,
+                            on a schedule in GitHub Actions.
+                        </p>
+                    </div>
+                    <div>
+                        <h3>Payment workflow</h3>
+                        <p>
+                            Downloads bank transactions, updates the master Excel file and loads payments into the
+                            club's management system.
+                            <a href="../pages/discobolo.html">Read the case study</a>
+                        </p>
+                    </div>
+                    <div>
+                        <h3>Court-light charges</h3>
+                        <p>
+                            Records court-light usage, calculates monthly charges and uploads them safely.
+                            <a href="../pages/court-light.html">Read the case study</a>
+                        </p>
+                    </div>
+                    <div>
+                        <h3>Debtor reminders</h3>
+                        <p>
+                            Sends personalized WhatsApp reminders to members with pending payments.
+                            <a href="https://github.com/nahuelseoane/discobolo-debtor-notifier" target="_blank" rel="noopener noreferrer">View on GitHub</a>
+                        </p>
+                    </div>
+                    <div>
+                        <h3>Committee reports</h3>
+                        <p>Generates the reports the club's committee uses to follow its operations.</p>
+                    </div>
+                </div>
+                <div class="technology-list" aria-label="Automation technologies">
+                    <span>Python</span><span>Gmail API</span><span>People API</span><span>GitHub Actions</span>
+                    <span>Selenium</span><span>openpyxl</span><span>Excel</span>
+                </div>
+            </section>
+
+            <aside class="container case-study-section" aria-labelledby="privacy-title">
+                <h2 id="privacy-title">Privacy Note</h2>
+                <p>
+                    These tools handle members' data, so most repositories are private and this page shows no member
+                    information. The club's privacy policy is at
+                    <a href="https://clubdiscobolo.com/privacidad">clubdiscobolo.com/privacidad</a>.
+                </p>
+            </aside>
+
+            <nav class="container case-study-section related-links" aria-label="Related pages">
+                <a href="https://clubdiscobolo.com/">Visit clubdiscobolo.com</a>
+                <a href="../index.html#portfolio">Return to Projects</a>
+            </nav>
+        </article>
+    </main>
+
+    <div id="footer-placeholder" data-src="../partials/footer.html"></div>
+
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/case-study.js"></script>
+    <script src="../assets/js/lightbox.js"></script>
+</body>
+
+</html>

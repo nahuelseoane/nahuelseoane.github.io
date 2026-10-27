@@ -1,0 +1,174 @@
+.page-case-study #main {
+    padding-top: clamp(2rem, 5vw, 4rem);
+}
+
+.page-case-study section {
+    margin-bottom: 4rem;
+}
+
+.page-case-study .container {
+    max-width: 1080px;
+}
+
+.case-study-intro {
+    max-width: 760px;
+    font-size: var(--fs-lg);
+}
+
+.case-study-section {
+    padding-top: 1rem;
+    border-top: 1px solid rgba(0, 188, 212, 0.28);
+}
+
+.workflow-step {
+    margin-bottom: 4rem;
+}
+
+.workflow-step ul,
+.reliability-grid ul {
+    padding-left: 1.25rem;
+}
+
+.gifs {
+    display: block;
+    width: 80%;
+    max-width: 100%;
+    height: auto;
+    margin: 10px auto 0;
+    border-radius: 10px;
+}
+
+.media-placeholder {
+    position: relative;
+    display: grid;
+    place-items: center;
+    min-height: 300px;
+    margin: 1.5rem 0 1rem;
+    overflow: hidden;
+    color: var(--text);
+    background: var(--project-bg);
+    border: 2px dashed rgba(0, 188, 212, 0.55);
+    border-radius: 10px;
+    text-align: center;
+}
+
+.media-placeholder img {
+    display: none;
+    width: 100%;
+    height: auto;
+}
+
+.media-placeholder.is-loaded {
+    display: block;
+    min-height: 0;
+    border-style: solid;
+}
+
+.media-placeholder.is-loaded img {
+    display: block;
+}
+
+.media-placeholder.is-loaded .media-fallback {
+    display: none;
+}
+
+.media-fallback {
+    max-width: 680px;
+    padding: 2rem;
+}
+
+.media-fallback strong,
+.media-fallback code {
+    display: block;
+}
+
+.media-fallback code {
+    margin-top: 0.75rem;
+    overflow-wrap: anywhere;
+}
+
+.media-placeholder figcaption {
+    padding: 0.75rem 1rem;
+}
+
+.reliability-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.5rem;
+}
+
+.technology-list,
+.related-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.technology-list span {
+    padding: 0.35rem 0.65rem;
+    background: var(--project-bg);
+    border: 1px solid rgba(0, 188, 212, 0.45);
+    border-radius: 999px;
+}
+
+.related-links a {
+    font-weight: 700;
+}
+
+.related-links .github-action {
+    color: var(--text);
+    background: transparent;
+    border-color: var(--brand);
+}
+
+.related-links .github-action:hover {
+    color: #fff;
+    background: var(--brand-strong);
+}
+
+.page-case-study .btn,
+.page-case-study .button {
+    display: inline-block;
+    padding: 8px 14px;
+    color: #fff;
+    background: var(--brand);
+    border: 0;
+    border-radius: 6px;
+    line-height: 1.2;
+    text-decoration: none;
+    transition: background 0.25s ease;
+}
+
+.page-case-study .btn:hover,
+.page-case-study .button:hover {
+    background: #008ba3;
+}
+
+.page-case-study .btn:focus-visible,
+.page-case-study .button:focus-visible {
+    outline: 3px solid #9be7ff;
+    outline-offset: 2px;
+}
+
+.page-case-study button.btn {
+    cursor: pointer;
+}
+
+.page-case-study button.btn:disabled {
+    cursor: not-allowed;
+    opacity: 0.55;
+}
+
+@media (max-width: 768px) {
+    .page-case-study #main img:not(.profile-picture):not(.social-icon):not(.mobile-avatar) {
+        width: 100%;
+    }
+
+    .reliability-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .media-placeholder {
+        min-height: 240px;
+    }
+}

@@ -1,0 +1,520 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+
+    <title>Nahuel Seoane | Python & QA Automation</title>
+
+    <meta
+        name="description"
+        content="Portfolio of Python automation, QA testing, API testing, Selenium, backend projects, and real-world operational tools."
+    />
+
+    <!-- LinkedIn and social media preview -->
+    <meta
+        property="og:title"
+        content="Nahuel Seoane | Python & QA Automation"
+    />
+
+    <meta
+        property="og:description"
+        content="Projects in Python automation, QA testing, APIs, Selenium, backend development, and real-world process automation."
+    />
+
+    <meta
+        property="og:image"
+        content="https://jnahuel.com/assets/linkedin-preview.png"
+    />
+
+    <meta
+        property="og:image:width"
+        content="1200"
+    />
+
+    <meta
+        property="og:image:height"
+        content="627"
+    />
+
+    <meta
+        property="og:image:alt"
+        content="Nahuel Seoane — Python and QA Automation portfolio"
+    />
+
+    <meta property="og:url" content="https://jnahuel.com/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Nahuel Seoane Portfolio" />
+
+    <link rel="canonical" href="https://jnahuel.com/" />
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Space+Grotesk:wght@500;700&display=swap"
+        rel="stylesheet">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=JetBrains+Mono:wght@500;700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Syne:wght@600&display=swap"
+        rel="stylesheet">
+    <!-- svg icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=assignment,contact_page,face,forward_to_inbox,home,license,dark_mode,light_mode" /> -->
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/lightbox.css" />
+    <script>
+        try {
+            if (sessionStorage.getItem("portfolioWelcomeSeen")) {
+                document.documentElement.classList.add("welcome-seen");
+            } else {
+                sessionStorage.setItem("portfolioWelcomeSeen", "true");
+            }
+        } catch (error) {
+            // Keep the welcome presentation available when session storage is blocked.
+        }
+    </script>
+</head>
+
+<body>
+    <!-- Welcome -->
+    <div id="welcome-screen">
+        <img src="assets/images/welcome_background.jpeg" alt="background" class="background">
+        <div class="welcome-content">
+            <img src="assets/images/welcome_photo.jpeg" alt="Nahuel" class="welcome-photo">
+            <h1 id="intro"></h1>
+            <p>Welcome to my personal site</p>
+            <button id="enter-btn">Enter my world</button>
+        </div>
+    </div>
+
+    <!-- Sidebar -->
+    <div id="sidebar-placeholder" data-src="partials/sidebar.html"></div>
+
+    <!-- Main Content -->
+    <div id="main">
+        <section id="top" aria-labelledby="hero-title">
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <p class="hero-eyebrow">QA Automation Engineer</p>
+                    <h1 id="hero-title">Building reliable automation with Python.</h1>
+                    <p class="hero-summary">I design API tests, UI automation, and practical workflows that turn repetitive processes into reliable, maintainable solutions.</p>
+
+                    <div class="hero-actions" aria-label="Portfolio actions">
+                        <a href="#portfolio" class="button hero-button-primary">View Projects</a>
+                        <a href="assets/pdfs/Nahuel_Seoane_Automation_Engineer_CV.pdf" download class="button hero-button-secondary">Download CV</a>
+                    </div>
+
+                    <div class="hero-skills" aria-label="Core skills">
+                        <span>Python &amp; Pytest</span>
+                        <span>API &amp; UI Testing</span>
+                        <span>GitHub Actions</span>
+                    </div>
+                </div>
+
+                <figure class="hero-portrait">
+                    <img src="assets/images/profile_2.jpeg" alt="Nahuel Seoane" width="1254" height="1254" fetchpriority="high" />
+                </figure>
+            </div>
+        </section>
+
+
+        <section id="about">
+            <div class="container">
+                <header>
+                    <h2>About me</h2>
+                </header>
+        <p>
+            Python Automation Developer transitioning into QA Automation, with hands-on experience building workflow, UI, and data-processing automation.
+            Over the last years, I’ve built automation scripts, data-processing tools, and UI workflows that
+            significantly reduced manual work and improved operational efficiency.
+        </p>
+
+        <p>
+            My focus is on designing reliable, maintainable automation using Python, Selenium, and the Page Object Model —
+            always aiming for clean structure, clarity, and long-term scalability.
+        </p>
+
+        <p>
+            Coming from a development background, I bring strong problem-solving skills, debugging experience, and a deep
+            understanding of how systems behave under the hood. I’m currently expanding my knowledge in software testing
+            practices, test design, and modern automation frameworks to deliver high-quality, well-tested solutions.
+        </p>
+
+        <p>
+            My goal is to join a team where I can combine development, automation, and QA practices to build robust
+            pipelines, improve product quality, and create meaningful impact through smart automation.
+        </p>
+            </div>
+        </section>
+
+
+        <section id="what-i-do">
+            <div class="container">
+                <header>
+                    <h2>What I Do</h2>
+                </header>
+
+                <div class="glass-grid">
+
+                    <div class="glass-card">
+                        <div class="icon">🔧</div>
+                        <h3>Test Automation</h3>
+                        <p>UI automation with Python, Selenium, Pytest, and the Page Object Model.</p>
+                    </div>
+
+                    <div class="glass-card">
+                        <div class="icon">🧪</div>
+                        <h3>UI Testing (POM)</h3>
+                        <p>Reusable page objects, clean waits, and maintainable test architecture.</p>
+                    </div>
+
+                    <div class="glass-card">
+                        <div class="icon">⚙️</div>
+                        <h3>Backend Automation</h3>
+                        <p>REST API testing, data workflows, ETL scripts, and validation pipelines.</p>
+                    </div>
+
+                    <div class="glass-card">
+                        <div class="icon">🚀</div>
+                        <h3>Process Automation</h3>
+                        <p>Python tools that eliminate manual work and streamline daily operations.</p>
+                    </div>
+
+                    <div class="glass-card">
+                        <div class="icon">🧠</div>
+                        <h3>QA Mindset</h3>
+                        <p>Edge-case thinking, debugging, and quality-driven development.</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="portfolio">
+            <div class="container">
+                <header>
+                    <h1>My Projects</h1>
+                </header>
+
+
+                <div class="projects">
+                    <p>A selection of my web development and Python automation projects.</p>
+
+                    <section class="featured-project-section" aria-labelledby="featured-project-title">
+                        <h2 id="featured-project-title">Featured Project</h2>
+                        <div class="project featured-project">
+                            <p class="featured-project-label">Featured automation suite</p>
+                            <h3>Club Operations Automation Suite</h3>
+
+                            <div class="featured-project-media">
+                                <img src="assets/images/sytech_home.png" alt="Tennis-club payment processing automation interface" data-lightbox />
+                            </div>
+
+                            <p>
+                                An automation suite built for real tennis-club operations, covering payment processing,
+                                member communication, court-light usage, monthly Excel calculations, and Sytech uploads.
+                            </p>
+
+                            <p class="project-tools"><em>Tools: Python, Selenium, openpyxl, Excel, Google APIs</em></p>
+
+                            <div class="project-actions" aria-label="Club Operations Automation Suite links">
+                                <a class="button" href="discobolo/">Club Website &amp; Tools</a>
+                                <a class="button" href="pages/discobolo.html">Payment Workflow</a>
+                                <a class="button" href="pages/court-light.html">Court Light Demo</a>
+                            </div>
+                        </div>
+                    </section>
+
+                    <h2 class="automation-projects-title">Automation Projects</h2>
+                    <div class="project-list">
+
+                        <!-- Project 1 -->
+                        <!-- Python API Testing Suite -->
+                        <div class="project">
+                            <h3>1. Python API Testing Suite</h3>
+
+                            <img
+                                src="assets/images/api-testing-suite-report.png"
+                                alt="Python API Testing Suite report showing 33 passing tests"
+                                data-lightbox
+                            />
+
+                            <p>
+                                A 33-test API automation suite covering product and authentication
+                                endpoints with functional, negative, boundary, smoke, and JSON Schema
+                                contract testing.
+                            </p>
+
+                            <p class="project-tools"><em>Tools: Python, Pytest, Requests, JSON Schema, Ruff, GitHub Actions</em></p>
+
+                            <div class="project-actions">
+                                <a class="button project-action-secondary github-action"
+                                    href="https://github.com/nahuelseoane/python-api-testing-suite"
+                                    target="_blank"
+                                    rel="noopener noreferrer">
+                                    <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 .7A11.5 11.5 0 0 0 8.4 23c.6.1.8-.3.8-.6v-2.2c-3.4.7-4.1-1.4-4.1-1.4-.5-1.4-1.3-1.8-1.3-1.8-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.7 0-1.3.4-2.3 1.2-3.1-.1-.3-.5-1.6.1-3.1 0 0 1-.3 3.2 1.2a11 11 0 0 1 5.8 0C15.8 4.7 16.8 5 16.8 5c.6 1.5.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.4-2.8 5.4-5.5 5.7.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A11.5 11.5 0 0 0 12 .7Z"/></svg>
+                                    GitHub
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Project 2 -->
+                        <!-- Python Workflow Automation Engine -->
+                        <div class="project">
+                            <h3>2. Python Workflow Automation Engine</h3>
+
+                            <img
+                                src="assets/images/workflow-engine.png"
+                                alt="Python Workflow Automation Engine running in the terminal"
+                                data-lightbox
+                            />
+
+                            <p>
+                                A YAML-driven automation engine built with Python. It validates task
+                                dependencies, executes actions in the correct order, processes Excel
+                                data, generates reports, and runs automated tests through GitHub Actions.
+                            </p>
+
+                            <p class="project-tools"><em>Tools: Python, Pytest, Typer, PyYAML, openpyxl, GitHub Actions</em></p>
+
+                            <div class="project-actions">
+                                <a class="button project-action-secondary github-action"
+                                    href="https://github.com/nahuelseoane/python-workflow-automation-engine"
+                                    target="_blank"
+                                    rel="noopener noreferrer">
+                                    <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 .7A11.5 11.5 0 0 0 8.4 23c.6.1.8-.3.8-.6v-2.2c-3.4.7-4.1-1.4-4.1-1.4-.5-1.4-1.3-1.8-1.3-1.8-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.7 0-1.3.4-2.3 1.2-3.1-.1-.3-.5-1.6.1-3.1 0 0 1-.3 3.2 1.2a11 11 0 0 1 5.8 0C15.8 4.7 16.8 5 16.8 5c.6 1.5.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.4-2.8 5.4-5.5 5.7.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A11.5 11.5 0 0 0 12 .7Z"/></svg>
+                                    GitHub
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Project 3 -->
+                        <div class="project">
+                            <h3>3. Automated Birthday Email System</h3>
+                            <img src="assets/images/birthday_email.png" alt="Automated birthday email system workflow" data-lightbox />
+                            <p>Automates personalized birthday greetings using Google contact data and the Gmail API, with scheduled execution through GitHub Actions.</p>
+                            <p class="project-tools"><em>Tools: Python, Gmail API -&gt; People, GitHub Actions</em></p>
+                            <div class="project-actions">
+                                <a class="button" href="discobolo/">Club Website &amp; Tools</a>
+                            </div>
+
+                        </div>
+
+                        <!-- Project 4 -->
+                        <div class="project">
+                            <h3>4. PDF Text Replacement Tool</h3>
+                            <img src="assets/images/modify_pdf_capture.png" alt="PDF text replacement tool interface" data-lightbox />
+                            <p>A Python utility that locates and replaces text in existing PDF documents while preserving the surrounding page layout.</p>
+                            <p class="project-tools"><em>Tools: Python, PyMuPDF</em></p>
+                            <div class="project-actions">
+                            <a class="button project-action-secondary github-action"
+                                href="https://github.com/nahuelseoane/pdf-word-substituter"
+                                target="_blank"
+                                rel="noopener noreferrer">
+                                <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 .7A11.5 11.5 0 0 0 8.4 23c.6.1.8-.3.8-.6v-2.2c-3.4.7-4.1-1.4-4.1-1.4-.5-1.4-1.3-1.8-1.3-1.8-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.7 0-1.3.4-2.3 1.2-3.1-.1-.3-.5-1.6.1-3.1 0 0 1-.3 3.2 1.2a11 11 0 0 1 5.8 0C15.8 4.7 16.8 5 16.8 5c.6 1.5.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.4-2.8 5.4-5.5 5.7.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A11.5 11.5 0 0 0 12 .7Z"/></svg>
+                                GitHub
+                            </a>
+                            </div>
+
+                        </div>
+                        <!-- Project 5 -->
+                        <div class="project">
+                            <h3>5. Automated Debtor Notification System</h3>
+                            <img src="https://i.imgur.com/BtujamF.png" referrerpolicy="no-referrer" alt="Automated debtor notification system workflow" data-lightbox>
+
+                            <p>Processes debtor data and automates personalized WhatsApp notifications, reducing repetitive administrative follow-up.</p>
+                            <p class="project-tools"><em>Tools: Python, Selenium, Pandas, WhatsApp</em></p>
+                            <div class="project-actions">
+                            <a class="button project-action-secondary github-action"
+                                href="https://github.com/nahuelseoane/discobolo-debtor-notifier"
+                                target="_blank"
+                                rel="noopener noreferrer">
+                                <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 .7A11.5 11.5 0 0 0 8.4 23c.6.1.8-.3.8-.6v-2.2c-3.4.7-4.1-1.4-4.1-1.4-.5-1.4-1.3-1.8-1.3-1.8-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.7 0-1.3.4-2.3 1.2-3.1-.1-.3-.5-1.6.1-3.1 0 0 1-.3 3.2 1.2a11 11 0 0 1 5.8 0C15.8 4.7 16.8 5 16.8 5c.6 1.5.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.4-2.8 5.4-5.5 5.7.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A11.5 11.5 0 0 0 12 .7Z"/></svg>
+                                GitHub
+                            </a>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+
+                    <h2>Frontend Projects</h2>
+                    <div class="project-list">
+
+                        <!-- Project 6 -->
+                        <div class="project">
+
+                            <h3>6. Google Homepage Clone</h3>
+
+                            <img src="https://i.imgur.com/wD3vIIv.png" referrerpolicy="no-referrer" alt="Google homepage clone interface" data-lightbox />
+
+                            <p>A responsive recreation of the Google homepage built to practise semantic HTML, CSS layout, Flexbox, Grid, and SVG assets.</p>
+                            <p class="project-tools"><em>Tools: HTML, CSS, SVG, Flexbox, Grid</em></p>
+                            <div class="project-actions">
+                            <a class="button project-action-secondary github-action"
+                                href="https://github.com/nahuelseoane/google-homepage-clone"
+                                target="_blank"
+                                rel="noopener noreferrer">
+                                <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 .7A11.5 11.5 0 0 0 8.4 23c.6.1.8-.3.8-.6v-2.2c-3.4.7-4.1-1.4-4.1-1.4-.5-1.4-1.3-1.8-1.3-1.8-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.7 0-1.3.4-2.3 1.2-3.1-.1-.3-.5-1.6.1-3.1 0 0 1-.3 3.2 1.2a11 11 0 0 1 5.8 0C15.8 4.7 16.8 5 16.8 5c.6 1.5.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.4-2.8 5.4-5.5 5.7.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A11.5 11.5 0 0 0 12 .7Z"/></svg>
+                                GitHub
+                            </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Backend -->
+                    <h2>Backend Projects</h2>
+                    <div class="project-list">
+                        <!-- Project 7 -->
+                        <div class="project">
+
+                            <h3>7. Coffee Shop – Django Web Application</h3>
+
+                            <img src="https://i.imgur.com/tj8qREI.png" referrerpolicy="no-referrer" alt="Coffee Shop Django web application interface" data-lightbox />
+                            <p>A full-stack web application built with Django that simulates an online coffee shop. The project demonstrates core web development concepts such as authentication, product management, and order handling, while also exposing a REST API for integration.</p>
+                            <p class="project-tools"><em>Tools: Django, PostgreSQL, DRF, Crispy Tailwind.</em></p>
+                            <div class="project-actions">
+                            <a class="button project-action-secondary github-action"
+                                href="https://github.com/nahuelseoane/coffeeshop"
+                                target="_blank"
+                                rel="noopener noreferrer">
+                                <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 .7A11.5 11.5 0 0 0 8.4 23c.6.1.8-.3.8-.6v-2.2c-3.4.7-4.1-1.4-4.1-1.4-.5-1.4-1.3-1.8-1.3-1.8-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.7 0-1.3.4-2.3 1.2-3.1-.1-.3-.5-1.6.1-3.1 0 0 1-.3 3.2 1.2a11 11 0 0 1 5.8 0C15.8 4.7 16.8 5 16.8 5c.6 1.5.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.4-2.8 5.4-5.5 5.7.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A11.5 11.5 0 0 0 12 .7Z"/></svg>
+                                GitHub
+                            </a>
+                            </div>
+
+                        </div>
+
+                        <!-- Project 8 -->
+                        <div class="project">
+
+                            <h3>8. Notes App – Flask Web Application</h3>
+
+                            <img src="https://i.imgur.com/WydPUEE.png" referrerpolicy="no-referrer" alt="Notes App Flask web application interface" data-lightbox />
+                            <p>A full-stack web application built with Flask that allows users to register, log in, and manage personal notes. The project demonstrates core backend concepts such as authentication, user-specific data handling, database migrations, and unit testing, while also integrating TailwindCSS for a clean and responsive frontend.</p>
+                            <p class="project-tools"><em>Tools: Flask, SQLAlchemy, Flask-Login, Flask-Migrate, WTForms, TailwindCSS, SQLite, unittest.</em></p>
+                            <div class="project-actions">
+                            <a class="button project-action-secondary github-action"
+                                href="https://github.com/nahuelseoane/notes-app-flask"
+                                target="_blank"
+                                rel="noopener noreferrer">
+                                <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 .7A11.5 11.5 0 0 0 8.4 23c.6.1.8-.3.8-.6v-2.2c-3.4.7-4.1-1.4-4.1-1.4-.5-1.4-1.3-1.8-1.3-1.8-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.7 0-1.3.4-2.3 1.2-3.1-.1-.3-.5-1.6.1-3.1 0 0 1-.3 3.2 1.2a11 11 0 0 1 5.8 0C15.8 4.7 16.8 5 16.8 5c.6 1.5.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.4-2.8 5.4-5.5 5.7.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A11.5 11.5 0 0 0 12 .7Z"/></svg>
+                                GitHub
+                            </a>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+        </section>
+
+
+        <section id="certificates">
+            <div class="container">
+                <h2>Certificates</h2>
+                <div class="cert-grid">
+                    <a href="./assets/pdfs/diploma_python_profesional.pdf" target="_blank">
+                        <img src="./assets/images/pdf_python_pro.png" alt="Python Certificate">
+                    </a>
+                    <a href="./assets/pdfs/diploma_django.pdf" target="_blank">
+                        <img src="./assets/images/pdf_django.png" alt="Django Certificate">
+                    </a>
+                    <a href="./assets/pdfs/diploma_fastapi.pdf" target="_blank">
+                        <img src="./assets/images/pdf_fastapi.png" alt="Fastapi Certificate">
+                    </a>
+                    <a href="./assets/pdfs/diploma_flask.pdf" target="_blank">
+                        <img src="./assets/images/pdf_flask.png" alt="Flask Certificate">
+                    </a>
+                    <a href="./assets/pdfs/diploma_git_github.pdf" target="_blank">
+                        <img src="./assets/images/pdf_git_github.png" alt="Git & Github Certificate">
+                    </a>
+                    <a href="./assets/pdfs/diploma_webscraping.pdf" target="_blank">
+                        <img src="./assets/images/pdf_webscraping.png" alt="Webscraping Certificate">
+                    </a>
+                    <a href="./assets/pdfs/diploma_sql_mysql.pdf" target="_blank">
+                        <img src="./assets/images/pdf_sql_mysql.png" alt="SQL MySQL Certificate">
+                    </a>
+                    <a href="./assets/pdfs/diploma_javascript.pdf" target="_blank">
+                        <img src="./assets/images/pdf_javascript.png" alt="JS Certificate">
+                    </a>
+                    <a href="./assets/pdfs/diploma_html_css.pdf" target="_blank">
+                        <img src="./assets/images/pdf_html_css.png" alt="HTML & CSS Certificate">
+                    </a>
+                    <a href="./assets/pdfs/coursera_EVP5V14JY091.pdf" target="blank">
+                        <img src="./assets/images/pdf_coursera_it_fundamentals.png" alt="Coursera IT Fund certificate">
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <div class="container">
+                <header>
+                    <h2>Contact</h2>
+                </header>
+                <div class="contact-panel">
+                    <div class="contact-intro">
+                        <h3>Let’s build something reliable.</h3>
+                        <p>Have a role, project, or automation challenge in mind? Send me a message.</p>
+                        <address class="contact-details">
+                            <a href="mailto:nahuelseoane@gmail.com">nahuelseoane@gmail.com</a>
+                            <a href="tel:+541133983542">+54 11 3398 3542</a>
+                        </address>
+                    </div>
+
+                    <form id="contact-form" action="https://formspree.io/f/myzezkog" method="POST">
+                        <div class="form-field">
+                            <label for="name">Name</label>
+                            <input id="name" type="text" name="name" placeholder="Your name" autocomplete="name" required />
+                        </div>
+
+                        <div class="form-field">
+                            <label for="email">Email</label>
+                            <input id="email" type="email" name="email" placeholder="you@example.com" autocomplete="email" required />
+                        </div>
+
+                        <div class="form-field">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" placeholder="How can I help?" rows="5" required></textarea>
+                        </div>
+
+                    <!-- Honeypot -->
+                    <div aria-hidden="true" class="hp">
+                        <label for="website">Leave this field empty</label>
+                        <input id="website" type="text" name="website" tabindex="-1" autocomplete="off">
+                    </div>
+
+                    <!-- Time-trap -->
+                    <input type="hidden" name="form_load_ts" id="form_load_ts" />
+                    <input type="hidden" name="submit_delay_ms" id="submit_delay_ms" />
+
+                    <input type="hidden" name="_subject" value="New message from portfolio" />
+
+                    <!-- Redirect after submit - Thanks Page -->
+                    <!-- <input type="hidden" name="_next" value="https://jnahuel.com/#thanks" /> -->
+                        <input type="submit" value="Send Message" class="button" />
+                    </form>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <div id="footer-placeholder" data-src="partials/footer.html"></div>
+
+    <!-- Scripts -->
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/lightbox.js"></script>
+</body>
+
+</html>
